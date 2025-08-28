@@ -29,13 +29,17 @@ import com.google.accompanist.permissions.isGranted
 import com.google.accompanist.permissions.rememberPermissionState
 import com.google.accompanist.permissions.shouldShowRationale
 import yae.composeplayground.codelabs.basicstatecodelab.WellnessScreen
+import yae.composeplayground.composables.DemoText
 import yae.composeplayground.composables.LazyColumnDemo
+import yae.composeplayground.composables.LazyColumnWithFlow
 import yae.composeplayground.composables.PersonInfoCard
 import yae.composeplayground.composables.SwipeToDismissDemo
 import yae.composeplayground.composables.TextFieldDemo
 import yae.composeplayground.counters.CountersScreen
+import yae.composeplayground.dynappbarvm.DemoDynAppBarVm
 import yae.composeplayground.models.SimplePerson
 import yae.composeplayground.navigation.NavigationDemo
+import yae.composeplayground.notifications.NotificationScreen
 import yae.composeplayground.state.StateFlowUI
 import yae.composeplayground.ui.theme.ComposePlaygroundTheme
 
@@ -47,7 +51,8 @@ class MainActivity : ComponentActivity() {
             ComposePlaygroundTheme {
                 //CountersScreen()
                 //SwipeToDismissDemo()
-                StateFlowUI()
+                //LazyColumnWithFlow()
+                NotificationScreen()
             }
         }
     }
