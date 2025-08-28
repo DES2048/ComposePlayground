@@ -29,7 +29,7 @@ fun NavigationDemo() {
     // navController, нужен для навигации
     val navController = rememberNavController()
 
-    // NavHost это Composable в котором настраиваются мрашруты и отображаются экраны
+    // NavHost это Composable в котором настраиваются маршруты и отображаются экраны
     // startDestination - стартовый маршрут
     NavHost(navController = navController, startDestination = Screen.MainScreen.route) {
         // здесь описывается конкретный маршрут и его экран
@@ -110,7 +110,7 @@ sealed class Screen(val route:String) {
         fun argList(): List<NamedNavArgument> = listOf(
             navArgument("name") {
                 type = NavType.StringType
-                defaultValue = "Annonimus"
+                defaultValue = "Annonimous"
                 nullable = false
             }
         )
