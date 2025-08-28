@@ -15,12 +15,14 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import kotlinx.coroutines.flow.collect
 
 @Composable
-fun StateFlowUI() {
-    val vm: StateFlowViewModel = viewModel()
+fun StateFlowUI(vm:StateFlowViewModel = viewModel()) {
+
     val counter by vm.counterStateFlow.collectAsState()
+
     var changes by remember {
         mutableIntStateOf(0)
     }
+
     LaunchedEffect(key1 = Unit) {
         vm.counterStateFlow.collect() {
             changes++
